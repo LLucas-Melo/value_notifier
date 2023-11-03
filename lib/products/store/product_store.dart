@@ -9,11 +9,12 @@ class ProductStore extends ValueNotifier<ProductState> {
   final ProductService service;
   Future fetchProducts() async {
     value = LoadingProductState();
+    await Future.delayed(const Duration(seconds: 2)); //???
     try {
       final products = await service.fetchProducts();
-      value = SuccessProdcuctState(products);
+      value = SuccessProductState(products);
     } catch (e) {
-      value = ErroProductState(e.toString());
+      value = ErrorProductState(e.toString());
     }
   }
 }

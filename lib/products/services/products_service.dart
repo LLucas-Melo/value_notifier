@@ -13,6 +13,8 @@ class ProductService {
     final list = response.data as List;
     final products = list.map((e) => ProductModel.fromMap(e)).toList();
 
+    print(list);
+
     return products;
   }
 }

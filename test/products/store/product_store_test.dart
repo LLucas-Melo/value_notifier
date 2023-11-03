@@ -13,12 +13,12 @@ void main() {
   test('deve alterar estado para sucesso', () async {
     when(() => service.fetchProducts()).thenAnswer((_) async => []);
     await store.fetchProducts();
-    expect(store.value, isA<SuccessProdcuctState>());
+    expect(store.value, isA<SuccessProductState>());
   });
 
   test('deve alterar estado para erro', () async {
     when(() => service.fetchProducts()).thenThrow(Exception('Error'));
     await store.fetchProducts();
-    expect(store.value, isA<ErroProductState>());
+    expect(store.value, isA<ErrorProductState>());
   });
 }

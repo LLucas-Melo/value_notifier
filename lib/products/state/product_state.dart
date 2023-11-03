@@ -4,16 +4,16 @@ abstract class ProductState {}
 
 class InicialProductState extends ProductState {}
 
-class SuccessProdcuctState extends ProductState {
-  final List<ProductModel> product;
+class SuccessProductState extends ProductState {
+  final List<ProductModel> products;
 
-  SuccessProdcuctState(this.product);
+  SuccessProductState(this.products);
 }
 
 class LoadingProductState extends ProductState {}
 
-class ErroProductState extends ProductState {
+class ErrorProductState extends ProductState {
   final String menssagem;
 
-  ErroProductState(this.menssagem);
+  ErrorProductState(this.menssagem);
 }

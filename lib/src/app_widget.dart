@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:value_notifier/src/home/home_page.dart';
+import 'package:value_notifier/products/product_page.dart';
 
 class AppWiget extends StatelessWidget {
   const AppWiget({super.key});
@@ -8,7 +8,7 @@ class AppWiget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: Homepage(),
+        body: ProductPage(),
       ),
     );
   }
