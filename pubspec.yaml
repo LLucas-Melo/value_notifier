@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   mocktail: ^1.0.1
+  provider: ^6.0.5
   uno: ^1.1.9
   
 
