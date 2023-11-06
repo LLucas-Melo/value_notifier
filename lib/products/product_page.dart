@@ -16,7 +16,9 @@ class _ProductPageState extends State<ProductPage> {
   @override
   void initState() {
     super.initState();
-    context.read<ProductStore>().fetchProducts();
+    WidgetsBinding.instance?.addPostFrameCallback((_) {
+      context.read<ProductStore>().fetchProducts();
+    });
   }
 
   @override
